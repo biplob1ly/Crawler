@@ -1,5 +1,6 @@
 import os
 
+
 def write_file(filename, data):
     with open(filename, 'w') as file:
         file.write(data)
@@ -36,6 +37,6 @@ def read_set_from_file(filename):
 
 
 def write_set_to_file(filename, link_set):
-    with open(filename, 'a') as file:
-        for link in link_set:
+    with open(filename, 'w') as file:
+        for link in sorted(link_set):
             file.write(link + '\n')
